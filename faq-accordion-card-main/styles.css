@@ -50,9 +50,9 @@ main {
 	align-items: center;
 	background-image: url('./images/bg-pattern-desktop.svg');
 	background-repeat: no-repeat;
-	background-size: 75%;
-	background-position-x: -415px;
-	background-position-y: -225px;
+	background-size: 87.5%;
+	background-position-x: -480px;
+	background-position-y: -270px;
 	margin: 0%;
 	overflow: hidden;
 }
@@ -88,17 +88,17 @@ hr {
 }
 
 .card__image-main {
-  transform: scale(.75, .75);
+  transform: scale(.9, .9);
   position: relative;
-  top: -25px;
-  left: -125px;
+  top: 10px;
+  left: -85px;
 }
 
 .card__image__overlay {
   position: absolute;
-  transform: scale(.65, .65);
-  top: 305px;
-  left: 105px;
+  transform: scale(.85, .85);
+  top: 355px;
+  left: 115px;
   z-index: 99;
   overflow: visible;
 }
