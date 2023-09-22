@@ -48,6 +48,12 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-image: url('./images/bg-pattern-desktop.svg');
+	background-repeat: no-repeat;
+	background-size: 75%;
+	background-position-x: -415px;
+	background-position-y: -225px;
+	margin: 0%;
 	overflow: hidden;
 }
 
@@ -56,7 +62,6 @@ article {
 	max-width: 450px;
 	height: 100%;
 	padding: 4rem;
-
 }
 
 h1 {
@@ -70,28 +75,34 @@ hr {
 }
 
 .card {
-	max-width: 960px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0%;
 }
+
 .card__image {
-	min-width: 380px;
-	background-image: url('./images/bg-pattern-desktop.svg');
-	background-repeat: no-repeat;
-	background-size: 165%;
-	background-position-x: -385px;
-	background-position-y: -215px;
+  width: 40%;
+  margin: 0%;
 }
 
-.card__image--desktop {
-	transform: scale(.85, .85);
-	position: relative;
-	top:-25px;
-	left: -125px;
-	z-index: 99;
-
+.card__image-main {
+  transform: scale(.75, .75);
+  position: relative;
+  top: -25px;
+  left: -125px;
 }
+
+.card__image__overlay {
+  position: absolute;
+  transform: scale(.65, .65);
+  top: 305px;
+  left: 105px;
+  z-index: 99;
+  overflow: visible;
+}
+
 .attribution {
 	 font-size: 11px; text-align: center;
 }
