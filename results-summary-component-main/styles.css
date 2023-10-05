@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+	/* theme colors */
+	--color-light-red: hsl(0, 100%, 67%);
+	--color-orangey-yellow: hsl(39, 100%, 56%);
+	--color-green-teal:hsl(166, 100%, 37%);
+	--color-cobalt-blue:hsl(234, 85%, 45%);
+	/* body background gradients */
+	--color-light-slate-blue: hsl(252, 100%, 67%);
+	--color-light-royal-blue: hsl(241, 81%, 54%);
+	/* circle background gradients */
+	--color-violet-blue:hsla(256, 72%, 46%, 1);
+	--color-persian-blue:hsla(241, 72%, 46%, 0);
+
+	/*neutral colors */
+	--color-white: hsl(0, 0%, 100%);
+	--color-pale-blue: hsl(221, 100%, 96%);
+	--color-light-lavender: hsl(241, 100%, 89%);
+	--color-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+.page {
+	background-color: var(--color-white);
+	font-family: 'Hanken Grotesk', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	min-height: 100dvh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.content {
+	margin: auto;
+	border-radius: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 800px;
+}
+
+.result {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 40%;
+	border-radius: 1.2em;
+	background-image: linear-gradient(to top, var(--color-light-royal-blue), var(--color-light-slate-blue));
+}
+
+.result__header {
+	color: hsla(0, 0%, 100%, 0.5);;
+	font-weight: 500;
+	margin: 2.5rem;
+}
+
+
+.result__score {
+	padding: 4.5rem;
+}
+
+.result__comments {
+	margin: 3rem;
+}
+
+.score {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 120px;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, var(--color-persian-blue), var(--color-violet-blue));
+}
+
+.score__points {
+	color: var(--color-white);
+	font-size: 8rem;
+	font-weight: 700;
+}
+
+.score__total {
+	color: hsla(0, 0%, 100%, 0.3);
+	margin-top: -1.5rem;
+}
+
+.comments {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.comments__header {
+	color: var(--color-white);
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+.comments__submission {
+	color: hsla(0, 0%, 100%, 0.5);
+	text-align: center;
+	margin: 1.5rem;
+}
+
+.footer { font-size: 1.5rem; text-align: center; }
+.footer a { color: hsl(228, 45%, 44%); }

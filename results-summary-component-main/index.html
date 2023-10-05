@@ -5,24 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+   <link rel="stylesheet" href="./styles.css">
 
   <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
-  <main class="container">
+<body class="page">
+  <main class="content page__content">
     <div class="result">
-      <h1 class="result__header">Your Result</h1>
-      <div class="score">
+      <h3 class="result__header">Your Result</h3>
+      <div class="score result__score">
         <h2 class="score__points">76</h2>
         <p class="score__total">of 100</p>
       </div>
-      <div class="comments">
+      <div class="comments result__comments">
         <h2 class="comments__header">Great</h2>
         <p class="comments__submission">
           You scored higher than 65% of
@@ -33,29 +28,29 @@
     <div class="summary">
       <h3 class="summary__header">Summary</h3>
       <div class="ratings ratings_reaction-theme">
-        <i class="ratings__icon"></i>
+        <i class="ratings__icon"><img src="./assets/images/icon-reaction.svg" alt="reaction-icon"></i>
         <span class="ratings__category">Reaction</span>
         <span class="ratings__score">80 / 100</span>
       </div>
        <div class="ratings ratings_memory-theme">
-        <i class="ratings__icon"></i>
+        <i class="ratings__icon"><img src="./assets/images/icon-memory.svg" alt="memory-icon"></i>
         <span class="ratings__category">Memory</span>
         <span class="ratings__score">92 / 100</span>
       </div>
        <div class="ratings ratings_verbal-theme">
-        <i class="ratings__icon"></i>
+        <i class="ratings__icon"><img src="./assets/images/icon-verbal.svg" alt="verbal-icon"></i>
         <span class="ratings__category">Verbal</span>
         <span class="ratings__score">61 / 100</span>
       </div>
        <div class="ratings ratings_visual-theme">
-        <i class="ratings__icon"></i>
+        <i class="ratings__icon"><img src="./assets/images/icon-visual.svg" alt="visual-icon"></i>
         <span class="ratings__category">Visual</span>
         <span class="ratings__score">72 / 100</span>
       </div>
       <button class="summary__button">Continue</button>
     </div>
   </main>
-  <footer class="attribution">
+  <footer class="footer">
     <span class="attribution__challenge">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
       target="_blank">Frontend Mentor</a>.
