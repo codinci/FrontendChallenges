@@ -5,59 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css">
 
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body class="page">
   <main class="content page__content">
-    <div class="result">
-      <h3 class="result__header">Your Result</h3>
+    <section class="result">
+      <h3 class="result-header result__header">Your Result</h3>
       <div class="score result__score">
         <h2 class="score__points">76</h2>
-        <p class="score__total">of 100</p>
+        <p class="total-score score__total">of 100</p>
       </div>
       <div class="comments result__comments">
-        <h2 class="comments__header">Great</h2>
-        <p class="comments__submission">
+        <h2 class="comments-header comments__header">Great</h2>
+        <p class="submission comments__submission">
           You scored higher than 65% of
           the people who have taken these tests.
         </p>
       </div>
-    </div>
-    <div class="summary">
-      <h3 class="summary__header">Summary</h3>
-      <div class="ratings ratings_reaction-theme">
-        <i class="ratings__icon"><img src="./assets/images/icon-reaction.svg" alt="reaction-icon"></i>
-        <span class="ratings__category">Reaction</span>
-        <span class="ratings__score">80 / 100</span>
+    </section>
+    <section class="summary">
+      <h3 class="summary-header summary__header">Summary</h3>
+      <div class="category-ratings summary__ratings">
+        <div class="ratings category-ratings__ratings ratings_reaction-theme">
+          <div class="category">
+            <i class="category__icon"><img src="./assets/images/icon-reaction.svg" alt="reaction-icon"></i>
+            <span class="category__name category_reaction-theme">Reaction</span>
+          </div>
+          <div class="rating-score">
+            <span class="rating-score__tally">80</span>
+            <span class="rating-score__total"> / 100</span>
+          </div>
+        </div>
+        <div class="ratings category-ratings__ratings ratings_memory-theme">
+          <div class="category">
+            <i class="category__icon"><img src="./assets/images/icon-memory.svg" alt="memory-icon"></i>
+            <span class="category__name category_memory-theme">Memory</span>
+          </div>
+          <div class="rating-score">
+            <span class="rating-score__tally">92</span>
+            <span class="rating-score__total"> / 100</span>
+          </div>
+        </div>
+        <div class="ratings category-ratings__ratings ratings_verbal-theme">
+          <div class="category">
+            <i class="category__icon"><img src="./assets/images/icon-verbal.svg" alt="verbal-icon"></i>
+            <span class="category__name category_verbal-theme">Verbal</span>
+          </div>
+          <div class="rating-score">
+            <span class="rating-score__tally">61</span>
+            <span class="rating-score__total"> / 100</span>
+          </div>
+        </div>
+        <div class="ratings category-ratings__ratings ratings_visual-theme">
+          <div class="category">
+            <i class="category__icon"><img src="./assets/images/icon-visual.svg" alt="visual-icon"></i>
+            <span class="category__name category_visual-theme">Visual</span>
+          </div>
+          <div class="rating-score">
+            <span class="rating-score__tally">71</span>
+            <span class="rating-score__total"> / 100</span>
+          </div>
+        </div>
+        <button class="button summary__button button_hover">Continue</button>
       </div>
-       <div class="ratings ratings_memory-theme">
-        <i class="ratings__icon"><img src="./assets/images/icon-memory.svg" alt="memory-icon"></i>
-        <span class="ratings__category">Memory</span>
-        <span class="ratings__score">92 / 100</span>
-      </div>
-       <div class="ratings ratings_verbal-theme">
-        <i class="ratings__icon"><img src="./assets/images/icon-verbal.svg" alt="verbal-icon"></i>
-        <span class="ratings__category">Verbal</span>
-        <span class="ratings__score">61 / 100</span>
-      </div>
-       <div class="ratings ratings_visual-theme">
-        <i class="ratings__icon"><img src="./assets/images/icon-visual.svg" alt="visual-icon"></i>
-        <span class="ratings__category">Visual</span>
-        <span class="ratings__score">72 / 100</span>
-      </div>
-      <button class="summary__button">Continue</button>
-    </div>
+
+    </section>
   </main>
   <footer class="footer">
-    <span class="attribution__challenge">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
-      target="_blank">Frontend Mentor</a>.
-    </span>
-    <span class="attribution__coder">
-      Coded by <a href="https://github.com/codinci">Codinci</a>.
-    </span>
+    <div class="attribution">
+      <span class="attribution__challenge">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a>.
+      </span>
+      <span class="attribution__coder">
+        Coded by <a href="https://github.com/codinci">Codinci</a>.
+      </span>
+    </div>
+    <div class="copyright">
+      <span id="copyrightYear"></span> <i>&copy;</i>
+    </div>
   </footer>
 </body>
 </html>
+<script>
+  const date = new Date().getFullYear();
+  const setYear = document.getElementById('copyrightYear')
+  setYear.textContent = date;
+</script>
