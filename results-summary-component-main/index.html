@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
+  <script defer type="module" src="./index.mjs"></script>
 
   <title>Frontend Mentor | Results summary component</title>
 </head>
@@ -27,49 +28,10 @@
     </section>
     <section class="summary">
       <h3 class="summary-header summary__header">Summary</h3>
-      <div class="category-ratings summary__ratings">
-        <div class="ratings category-ratings__ratings ratings_reaction-theme">
-          <div class="category">
-            <i class="category__icon"><img src="./assets/images/icon-reaction.svg" alt="reaction-icon"></i>
-            <span class="category__name category_reaction-theme">Reaction</span>
-          </div>
-          <div class="rating-score">
-            <span class="rating-score__tally">80</span>
-            <span class="rating-score__total"> / 100</span>
-          </div>
-        </div>
-        <div class="ratings category-ratings__ratings ratings_memory-theme">
-          <div class="category">
-            <i class="category__icon"><img src="./assets/images/icon-memory.svg" alt="memory-icon"></i>
-            <span class="category__name category_memory-theme">Memory</span>
-          </div>
-          <div class="rating-score">
-            <span class="rating-score__tally">92</span>
-            <span class="rating-score__total"> / 100</span>
-          </div>
-        </div>
-        <div class="ratings category-ratings__ratings ratings_verbal-theme">
-          <div class="category">
-            <i class="category__icon"><img src="./assets/images/icon-verbal.svg" alt="verbal-icon"></i>
-            <span class="category__name category_verbal-theme">Verbal</span>
-          </div>
-          <div class="rating-score">
-            <span class="rating-score__tally">61</span>
-            <span class="rating-score__total"> / 100</span>
-          </div>
-        </div>
-        <div class="ratings category-ratings__ratings ratings_visual-theme">
-          <div class="category">
-            <i class="category__icon"><img src="./assets/images/icon-visual.svg" alt="visual-icon"></i>
-            <span class="category__name category_visual-theme">Visual</span>
-          </div>
-          <div class="rating-score">
-            <span class="rating-score__tally">71</span>
-            <span class="rating-score__total"> / 100</span>
-          </div>
+      <div id="category-score" class="category-ratings summary__ratings">
+        <!-- Generated via javascript -->
         </div>
         <button class="button summary__button button_hover">Continue</button>
-      </div>
     </section>
   </main>
   <footer class="footer">
@@ -88,8 +50,3 @@
   </footer>
 </body>
 </html>
-<script>
-  const date = new Date().getFullYear();
-  const setYear = document.getElementById('copyrightYear')
-  setYear.textContent = date;
-</script>

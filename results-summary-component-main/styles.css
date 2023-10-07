@@ -175,15 +175,26 @@ html {
 	margin: 1.2rem;
 }
 
-.category__icon{
+.icon{
 	position: relative;
 	top: 5px;
 	bottom: 5px;
 }
 
-.rating-score__tally {
+.category__icon {
+	margin: .2rem;
+}
+
+.tally {
 	font-weight: 800;
 	color: var(--color-dark-gray-blue);
+}
+
+.rating-score {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: .2rem;
 }
 
 .rating-score__total {
@@ -192,7 +203,7 @@ html {
 }
 
 .button {
-	width: 270px;
+	width: 285px;
 	border-radius: 2.5rem;
 	font-weight: 700;
 	color: var(--color-white);
@@ -275,6 +286,6 @@ html {
 	}
 	.category-ratings {	width: 100%;}
 	.ratings { width: 80%;}
-	.button { width: 85%;}
+	.button { width: 90%;}
 
 }
