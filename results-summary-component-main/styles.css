@@ -128,11 +128,10 @@ html {
 .submission {
 	color: hsla(0, 0%, 100%, 0.5);
 	text-align: center;
-	font-size: 1.5rem;
 }
 
 .comments__submission {
-	margin:0 3rem 2.5rem 3rem;
+	margin:0 2.5rem 3rem 2.5rem;
 }
 
 .summary {
@@ -193,7 +192,7 @@ html {
 }
 
 .button {
-	width: 100%;
+	width: 270px;
 	border-radius: 2.5rem;
 	font-weight: 700;
 	color: var(--color-white);
@@ -202,7 +201,7 @@ html {
 
 .summary__button {
 	padding: 1.5rem;
-	margin-top: 2rem;
+	margin: 2rem 1.5rem;
 }
 
 .button_hover:hover {
@@ -242,6 +241,40 @@ html {
 }
 
 @media screen and (max-width: 415px) {
+	.page {justify-content: flex-start;	}
 
+	.content {
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 2rem;
+		width: 100dvw;
+		border-radius: 0%;
+		box-shadow: none;
+	}
+
+	.page__content {margin: 0;}
+	.result {
+		width: 100%;
+		border-radius: 0;
+		border-bottom-left-radius: 3.5rem;
+		border-bottom-right-radius: 3.5rem;
+	}
+
+	.result__header {margin: 1.5rem;	}
+	.score {width: 80px;}
+	.result__score {padding: 1.5rem;}
+	.score__points {font-size: 5rem;}
+	.score__total {margin-top: -1rem;}
+	.result__comments {margin: 1rem;}
+	.comments-header {font-size: 2.5rem;}
+	.comments__header {margin: .5rem;}
+
+	.summary {
+		align-items: flex-start;
+		width: 100%;
+	}
+	.category-ratings {	width: 100%;}
+	.ratings { width: 80%;}
+	.button { width: 85%;}
 
 }
