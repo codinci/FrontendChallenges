@@ -5,39 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="https://kit.fontawesome.com/13dade8f76.js" crossorigin="anonymous"></script>
 
   <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body class="page">
-  <main class="content">
-    <h1 class="header">PING</h1>
+  <main class="content page__content">
+    <div class="header content__header">
+      <img src="./images/logo.svg" alt="company-logo" class="logo">
+    </div>
     <div class="notification">
-      <h2 class="notification__header">We are launching soon!</h2>
-      <p class="notification__subscription">Subscribe and get notified</p>
+      <div class="header-notification notification__header">
+        <span class="launch-call-out">We are launching</span>
+        <span class="launch-time">soon!</span>
+      </div>
+      <p class="notification__message">Subscribe and get notified</p>
     </div>
     <div class="email-subscription">
       <div class="email-input">
         <input type="email" id="email" class="email-input__email-address"
-        placeholder="Your Email Address">
-        <div class="email-input__error-message"></div>
+        placeholder="Your email address...">
+        <button class="email-input__button">Notify Me</button>
       </div>
-      <button class="email-subscription__button">Notify Me</button>
+      <div class="email-subscription__error-message">
+        <p class="error-message__text"></p>
+      </div>
     </div>
     <div class="image">
       <img src="./images/illustration-dashboard.png" alt="illustrated-dashboard"
        class="image__illustration">
     </div>
   </main>
-  <footer class="footer">
-    <div class="socials">
-
-
+  <footer class="footer page__footer">
+    <div class="socials footer__socials">
+      <i class="socials__icons fa-brands fa-facebook-f"></i>
+      <i class="socials__icons fa-brands fa-twitter"></i>
+      <i class="socials__icons fa-brands fa-instagram"></i>
     </div>
     <div class="attribution">
       <span class="attribution__challenge">
