@@ -25,64 +25,64 @@
       <!-- FAQ section -->
       <article class="card__info">
         <h1 class="card__info-title"> FAQ </h1>
-        <section class="card__item">
+        <div class="card__item">
           <input type="checkbox" class="card__item-checkbox" id="toggle1">
-          <label class="card__item-icon" for="toggle1">
-            <h2 class="card__item-question">How many team members can I invite?</h2>
+          <label class="card-label" for="toggle1">
+            How many team members can I invite?
             <img src="./images/icon-arrow-down.svg" alt="down-arrow-icon" class="icon">
           </label>
           <p class="card__item-response">
             You can invite up to 2 additional users on the Free plan.
             There is no limit on team members for the Premium plan.
           </p>
-        </section>
+        </div>
         <hr class="card__item-divider">
-        <section class="card__item">
+        <div class="card__item">
           <input type="checkbox" class="card__item-checkbox" id="toggle2">
-          <label class="card__item-icon" for="toggle2">
-            <h2 class="card__item-question">What is the maximum file upload size?</h2>
+          <label class="card-label" for="toggle2">
+            What is the maximum file upload size?
             <img src="./images/icon-arrow-down.svg" alt="down-arrow-icon" class="icon">
           </label>
           <p class="card__item-response">
              No more than 2GB. All files in your account must
              fit your allotted storage space.
           </p>
-        </section>
+        </div>
         <hr class="card__item-divider">
-        <section class="card__item">
+        <div class="card__item">
           <input type="checkbox" class="card__item-checkbox" id="toggle3">
-          <label class="card__item-icon" for="toggle3">
-            <h2 class="card__item-question">How do I reset my password?</h2>
+          <label class="card-label" for="toggle3">
+            How do I reset my password?
             <img src="./images/icon-arrow-down.svg" alt="down-arrow-icon" class="icon">
           </label>
           <p class="card__item-response">
             Click “Forgot password” from the login page or “Change password”
             from your profile page. A reset link will be emailed to you.
           </p>
-        </section>
+        </div>
         <hr class="card__item-divider">
-        <section class="card__item">
+        <div class="card__item">
           <input type="checkbox" class="card__item-checkbox" id="toggle4">
-          <label class="card__item-icon" for="toggle4">
-            <h2 class="card__item-question">Can I cancel my subscription?</h2>
+          <label class="card-label" for="toggle4">
+            Can I cancel my subscription?
             <img src="./images/icon-arrow-down.svg" alt="down-arrow-icon" class="icon">
           </label>
           <p class="card__item-response">
             Yes! Send us a message and we’ll process your request no questions asked.
           </p>
-        </section>
+        </div>
         <hr class="card__item-divider">
-        <section class="card__item">
+        <div class="card__item">
           <input type="checkbox" class="card__item-checkbox" id="toggle5">
-          <label class="card__item-icon" for="toggle5">
-            <h2>Do you provide additional support?</h2>
+          <label class="card-label" for="toggle5">
+            Do you provide additional support?
             <img src="./images/icon-arrow-down.svg" alt="down-arrow-icon" class="icon">
           </label>
           <p class="card__item-response">
            Chat and email support is available 24/7. Phone lines
            are open during normal business hours.
           </p>
-        </section>
+        </div>
         <hr class="card__item-divider">
       </article>
     </div>
@@ -97,11 +97,12 @@
       <span id="copyrightYear"></span> <i>&copy;</i>
     </div>
   </footer>
+  <script>
+    const date = new Date().getFullYear();
+    const setYear = document.getElementById('copyrightYear')
+    setYear.textContent = date;
+  </script>
 </body>
 </html>
-<script>
-  const date = new Date().getFullYear();
-  const setYear = document.getElementById('copyrightYear')
-  setYear.textContent = date;
-</script>
+
 

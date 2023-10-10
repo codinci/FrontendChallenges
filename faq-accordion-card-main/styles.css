@@ -143,16 +143,22 @@ span, i {
 	overflow: visible;
 }
 
-.card__item-checkbox {
-  	display: none;
-}
-
-.card__item-icon {
-	cursor: pointer;
+.card-label {
+	width: 370px;
+	color: var(--color-dark-grayish-blue);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	transition: transform 0.3s ease;
+}
+
+.card-label:hover {
+	color:var(--color-soft-red);
+	cursor: pointer;
+}
+
+.card__item-checkbox {
+  	display: none;
 }
 
 .card__item-response {
@@ -160,18 +166,21 @@ span, i {
 }
 
 /* Show the paragraph when the checkbox is checked */
-.card__item-checkbox:checked ~ .card__item-icon + .card__item-response {
-  	display: block;
+.card__item-checkbox:checked + .card-label + .card__item-response {
+  display: block;
 }
 
+
 /* Add a class to rotate the icon when the checkbox is checked */
-.card__item-checkbox:checked ~.card__item-icon .icon {
+.card__item-checkbox:checked ~.card-label .icon {
 	transform: rotate(180deg);
 }
 
-/* Add a class to change the h2 color when the checkbox is checked */
-.card__item-checkbox:checked ~.card__item-icon h2 {
+/* Add a class to change the label title color when the checkbox is checked */
+.card__item-checkbox:checked ~.card-label {
 	color: var(--color-dark-blue);
+	font-size: 1.45rem;
+	margin-bottom: .5rem;
 }
 
 .attribution {
@@ -228,6 +237,10 @@ span, i {
 		overflow: visible;
 	}
 
+	.card-label {
+		width: 270px;
+	}
+
 }
 
 /* Media query for devices with a width of 380px to 7600px */
@@ -274,6 +287,10 @@ span, i {
 		display: none;
 	}
 
+	.card-label {
+		width: 265px;
+	}
+
 }
 
 /** Mobile design */
@@ -318,5 +335,9 @@ span, i {
 
 	.card__image-overlay {
 		display: none;
+	}
+
+	.card-label {
+		width: 260px;
 	}
 }
