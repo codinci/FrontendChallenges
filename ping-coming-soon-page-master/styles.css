@@ -52,7 +52,7 @@ html {
 }
 
 .header-notification {
-	font-size: 4.5rem;
+	font-size: 2.5rem;
 	display: flex;
 	justify-content: space-between;
 	gap: 1rem;
