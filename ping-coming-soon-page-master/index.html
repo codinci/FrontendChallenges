@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
   <script defer src="https://kit.fontawesome.com/13dade8f76.js" crossorigin="anonymous"></script>
+  <script type="module" src="./index.mjs"></script>
 
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
@@ -22,13 +23,13 @@
       </div>
       <p class="notification__message">Subscribe and get notified</p>
     </div>
-    <div class="subscription-form content__subscription-form">
+    <form id="subForm" class="subscription-form content__subscription-form" novalidate>
       <div class="subscription-form__email">
-        <input type="email" id="email" class="input" placeholder="Your email address...">
-        <span class="error-message input__error-message">Please provide a valid email address</span>
+        <input type="email" id="emailInput" class="input" placeholder="Your email address...">
+        <span id="inputMessage" class="message input__message">Please provide a valid email address</span>
       </div>
-      <button class="subscription-form__button">Notify Me</button>
-    </div>
+      <button id="submitBtn" type="submit" class="subscription-form__button">Notify Me</button>
+    </form>
     <div class="image-container">
       <img src="./images/illustration-dashboard.png" alt="illustrated-dashboard"
        class="image__illustration">
@@ -50,7 +51,7 @@
       </span>
     </div>
     <div class="copyright">
-      <span id="copyrightYear"></span> <i>&copy;Copyright Ping. All rights reserved.</i>
+      <span id="copyrightYear"></span><i>&copy;Copyright Ping. All rights reserved.</i>
     </div>
   </footer>
 </body>
