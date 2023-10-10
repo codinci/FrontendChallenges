@@ -42,7 +42,8 @@ html {
 }
 
 .content__header {
-	margin: 2rem;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
 }
 
 .logo {
@@ -73,65 +74,70 @@ html {
 .notification__message {
 	text-align: center;
 	font-weight: 300;
-	font-size: 1.8rem;
 }
 
-.email-subscription {
-	margin: 2rem;
+.content__subscription-form {
+	margin: 3.5rem;
 }
 
-.email-input {
+.subscription-form {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	gap: 1.5rem;
-	height: 45px;
 }
 
-.email-input__email-address {
-	border-radius: 2rem;
+.subscription-form__email {
+	display: flex;
+	flex-direction: column;
+
+}
+.input {
+	height: 4.2rem;
 	width: 350px;
+	border-radius: 3rem;
 	vertical-align: 1.5rem;
 	padding-left: 2rem;
 	color: var(--color-gray);
 	border: 1px solid var(--color-pale-blue);
 }
 
-.email-input__email-address:focus {
+.input:focus {
 	border: 1px solid var(--color-blue);
 }
 
-.email-input__button {
+.subscription-form__button {
+	height: 4.5rem;
 	width: 150px;
 	border-radius: 2rem;
 	background-color: var(--color-blue);
 	color: white;
 	font-weight: 700;
 	box-shadow: 2px 5px 5px var(--color-pale-blue);
-
 }
 
-.email-input__button:hover {
+.subscription-form__button:hover {
 	cursor: pointer;
+	background-color: var(--color-pale-blue);
 }
 
-.email-subscription__error-message {
+.input__error-message {
 	padding-left: 1.5rem;
 	margin: 1rem;
-	display: none;
 }
 
-.error-message__text {
+.error-message {
 	font-size: 1.2rem;
 	font-weight: 300;
 	color: var(--color-light-red);
+	display: none;
 }
 
-.image {
+.image-container {
 	margin: 2.5rem;
 }
 
 .image__illustration {
-	width: 600px;
+	width: 550px;
 }
 
 .page__footer {
@@ -147,6 +153,7 @@ html {
 	justify-content: center;
 	align-items: center;
 }
+
 .socials__icons {
 	padding: 1.2rem;
 	margin: .5rem;
@@ -177,4 +184,31 @@ html {
 .copyright {
 	font-size: 1.2rem;
 	text-align: center;
+}
+
+@media screen and (max-width: 415px) {
+	.notification__header {
+		margin: 1.5rem;
+	}
+
+	.header-notification {
+		font-size: 2.5rem;
+		gap: .5rem;
+	}
+
+	.notification__message {
+		font-size: 1.5rem;
+	}
+
+	.subscription-form {
+		flex-direction: column;
+		width: 325px;
+	}
+
+	.input { width: 93%; }
+	.error-message { text-align: center; }
+	.subscription-form__button { width: 100%; }
+	.image__illustration { width: 320px; }
+
+
 }
