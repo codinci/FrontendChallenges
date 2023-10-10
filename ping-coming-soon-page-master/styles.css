@@ -52,19 +52,16 @@ html {
 }
 
 .header-notification {
-	font-size: 2.5rem;
+	font-size: 4.5rem;
 	display: flex;
 	justify-content: space-between;
 	gap: 1rem;
+	color: var(--color-gray);
+	font-weight: 300;
 }
 
 .notification__header {
 	margin: .5rem;
-}
-
-.launch-call-out {
-	color: var(--color-gray);
-	font-weight: 300;
 }
 
 .launch-time {
@@ -215,7 +212,7 @@ html {
 	}
 
 	.notification__message {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 
 	.subscription-form {
