@@ -2,6 +2,7 @@ const form = document.querySelector('#subForm');
 const email = document.querySelector('#emailInput');
 const msg = document.querySelector('#inputMessage');
 
+// display messages on form submission and hide after 3 seconds
 const toggleMessage = (message, type) => {
 	msg.textContent = message;
 	msg.style.display = 'block'
@@ -16,7 +17,7 @@ const toggleMessage = (message, type) => {
 	setTimeout(() => hideMessage(type), 3000)
 }
 
-
+// remove message classes
 const hideMessage = (type) => {
 	msg.classList.remove(`message_${type}`);
 	email.classList.remove(`input_${type}`);
@@ -24,7 +25,7 @@ const hideMessage = (type) => {
 	msg.textContent = '';
 }
 
-
+// form submission functionality
 form.addEventListener('submit',(e) => {
 	e.preventDefault();
 	const emailValidation = /^[(\w\d\W)+]+@[\w+]+\.[\w+]+$/i;
@@ -36,6 +37,8 @@ form.addEventListener('submit',(e) => {
 		toggleMessage('You will receive an email notification when site is up','success');
 	}
 })
+
+// set date on copyright
 const date = new Date().getFullYear();
 const setYear = document.getElementById('copyrightYear')
 setYear.textContent = date;

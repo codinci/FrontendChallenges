@@ -90,8 +90,8 @@ html {
 .subscription-form__email {
 	display: flex;
 	flex-direction: column;
-
 }
+
 .input {
 	height: 4.2rem;
 	width: 350px;
@@ -192,6 +192,7 @@ html {
 	font-size: 1.2rem;
 	text-align: center;
 }
+
 .attribution a {
 	color: hsl(228, 45%, 44%);
 	text-decoration: none;
