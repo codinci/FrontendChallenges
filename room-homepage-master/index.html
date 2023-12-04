@@ -31,6 +31,7 @@
   </style> -->
 </head>
 <body class="container">
+  <!-- Navbar -->
   <header class="header">
     <button class="header__mobile-hamburger">
       <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
@@ -38,38 +39,63 @@
       </svg>
     </button>
     <img class="header__logo" src="./images/logo.svg" alt="logo-image"/>
+
+    <!-- Desktop navigation -->
+    <nav class="header__navbar">
+      <ul class="navbar__links">
+        <li class="navbar-links__list-item"><a class="nabar-links__link-item">Home</a></li>
+        <li class="navbar-links__list-item"><a class="nabar-links__link-item">Shop</a></li>
+        <li class="navbar-links__list-item"><a class="nabar-links__link-item">About</a></li>
+        <li class="navbar-links__list-item"><a class="nabar-links__link-item">contact</a></li>
+      </ul>
+
+    </nav>
   </header>
 
-  <main class="main">
+    <!-- Hero slide section -->
     <section class="hero">
+      <picture class="hero__image">
+        <source srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 415px)" />
+        <img src="./images/desktop-image-hero-1.jpg" alt="hero-image" />
+      </picture>
       <div class="hero__slide">
-        <picture class="hero-slide__image">
-          <source srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 510px)" />
-          <img src="./images/desktop-image-hero-1.jpg" alt="hero-image" />
-        </picture>
-        <h1 class="hero-slide__header">Discover innovative ways to decorate</h1>
-        <p class="hero-slide__text">
-          We provide unmatched quality, comfort, and style for property owners across the country.
-          Our experts combine form and function in bringing your vision to life. Create a room in your
-          own style with our collection and make your property a reflection of you and what you love.
-        </p>
-      </div>
-      <div class="hero__action">
-        <p class="hero-action_text">Shop now</p><img class="hero-action__image" src="./images/icon-arrow.svg" alt="arrow-icon"/>
-      </div>
-      <div class="hero__slider">
-        <button id="leftSlider" class="hero-slider__left-button">
-          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/>
-          </svg>
-        </button>
-        <button id="rightSlider" class="hero-slider__left-button">
-          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/>
-          </svg>
-        </button>
+
+        <!-- Centered content -->
+        <div class="hero-slide__content">
+          <!-- Slides -->
+          <div class="hero-slide-content__main">
+            <h1 class="hero-slide-main__header">Discover innovative ways to decorate</h1>
+            <p class="hero-slide-main__text">
+              We provide unmatched quality, comfort, and style for property owners across the country.
+              Our experts combine form and function in bringing your vision to life. Create a room in your
+              own style with our collection and make your property a reflection of you and what you love.
+            </p>
+          </div>
+
+          <!-- Call to action button -->
+          <div class="hero-slide-content__action">
+            <p class="hero-slide-action__text">Shop now</p><img class="hero-slide-icon__image" src="./images/icon-arrow.svg" alt="arrow-icon"/>
+          </div>
+        </div>
+
+        <!-- Slider Buttons -->
+        <div class="hero-slide__buttons">
+          <button id="leftSlider" class="hero-slide-buttons__left-button">
+            <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <button id="rightSlider" class="hero-slide-buttons__right-button">
+            <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+
       </div>
     </section>
+
+    <!-- About section -->
     <section class="about">
       <img class="about__dark-image" src="./images/image-about-dark.jpg" alt="dark-about-image">
       <div class="about__info">
@@ -95,6 +121,5 @@
         <span id="copyrightYear"></span><i>&copy;Copyright Room. All rights reserved.</i>
       </div>
     </footer>
-  </main>
 </body>
 </html>

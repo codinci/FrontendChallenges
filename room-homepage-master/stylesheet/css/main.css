@@ -14,32 +14,139 @@ html {
 body {
   font-family: "League Spartan", sans-serif;
   font-weight: 500;
-  min-height: 100dvh;
+  max-height: 100dvh;
   font-size: 1.2rem;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
 
 .header {
-  display: flex;
-  margin: 4rem 2rem;
-  z-index: 1;
-  grid-column: 1/4;
+  grid-column: 1/5;
   grid-row: 1;
-  gap: 12rem;
+  z-index: 1;
+  margin: 4rem 2rem;
 }
 .header__mobile-hamburger {
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  background-color: transparent;
 }
 .header__logo {
-  width: 5rem;
+  margin-left: 8rem;
+}
+.header__navbar {
+  display: none;
 }
 
-.main {
-  grid-column: 1/4;
-  grid-row: 1/4;
+@media screen and (min-width: 1280px) {
+  .header {
+    grid-column: 1/5;
+    grid-row: 1;
+    z-index: 1;
+    margin: 4rem 2rem;
+    display: flex;
+  }
+  .header__mobile-hamburger {
+    display: none;
+  }
+  .header__logo {
+    margin: 0 4rem;
+    height: 1.5rem;
+  }
+  .header__navbar {
+    display: block;
+  }
+  .navbar-links {
+    list-style: none;
+    display: flex;
+  }
+  .navbar-links__list-item {
+    display: inline-block;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0.2rem 1.5rem;
+    text-transform: lowercase;
+  }
+  .navbar-links__link-item {
+    display: block;
+    text-decoration: none;
+  }
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+.hero__slide {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hero-slide__buttons {
+  grid-column: 5;
+  width: fit-content;
+  margin-top: -5.1rem;
+  background-color: hsl(0, 0%, 0%);
+  padding: 1rem;
+  margin-left: auto;
+}
+
+.hero-slide-buttons__left-button {
+  background-color: transparent;
+  border: none;
+  margin: 0 2rem;
+}
+.hero-slide-buttons__right-button {
+  background-color: transparent;
+  border: none;
+  margin: 0 2rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .hero__slide {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+  }
+  .hero-slide__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Center the content horizontally */
+  }
+  .hero-slide__buttons {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/5;
+  grid-row: 2/3;
+}
+
+@media screen and (min-width: 1280px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  grid-column: 1/5;
+  grid-row: 5;
 }
 
 /*# sourceMappingURL=main.css.map */
