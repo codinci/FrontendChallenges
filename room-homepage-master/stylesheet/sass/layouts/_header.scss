@@ -1,0 +1,17 @@
+.header {
+	display: flex;
+	margin: 4rem 2rem;
+	z-index: 1;
+	grid-column: 1/4;
+	grid-row: 1;
+	gap: 12rem;
+
+	&__mobile-hamburger {
+		border: none;
+		cursor: pointer;
+		background-color: transparent;
+	}
+	&__logo {
+		width: 5rem;
+	}
+}

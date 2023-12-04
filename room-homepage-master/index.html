@@ -7,90 +7,91 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Room homepage</title>
+  <link rel="stylesheet" href="./stylesheet/css/main.css"/>
+
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- <style>
+   .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 100dvh;
+   }
+   .header {
+    display: flex;
+    margin:2rem;
+    z-index: 2;
+    grid-column: 1/5;
+    grid-row: 1;
+   }
+   .main {
+    grid-column: 1/4;
+    grid-row:1/4;
+   }
+  </style> -->
 </head>
-<body>
-  <header>
-    <img src="./images/logo.svg" alt="logo-image"/>
-    <ul>
-      <li>Home</li>
-      <li>Shop</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
+<body class="container">
+  <header class="header">
+    <button class="header__mobile-hamburger">
+      <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#FFF" fill-rule="evenodd"/>
+      </svg>
+    </button>
+    <img class="header__logo" src="./images/logo.svg" alt="logo-image"/>
   </header>
-  <main>
-    <section>
-      <div>
-        <picture>
+
+  <main class="main">
+    <section class="hero">
+      <div class="hero__slide">
+        <picture class="hero-slide__image">
           <source srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 510px)" />
           <img src="./images/desktop-image-hero-1.jpg" alt="hero-image" />
         </picture>
-        <h1>Discover innovative ways to decorate</h1>
-        <p>
+        <h1 class="hero-slide__header">Discover innovative ways to decorate</h1>
+        <p class="hero-slide__text">
           We provide unmatched quality, comfort, and style for property owners across the country.
           Our experts combine form and function in bringing your vision to life. Create a room in your
           own style with our collection and make your property a reflection of you and what you love.
         </p>
       </div>
-      <div>
-        <picture>
-          <source srcset="./images/mobile-image-hero-2.jpg" media="(max-width: 510px)" />
-          <img src="./images/desktop-image-hero-2.jpg" alt="hero-image" />
-        </picture>
-        <h1>We are available all across the globe</h1>
-        <p>
-          With stores all over the world, it's easy for you to find furniture for your home or place of business.
-          Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
-          store locator. Any questions? Don't hesitate to contact us today.
-        </p>
+      <div class="hero__action">
+        <p class="hero-action_text">Shop now</p><img class="hero-action__image" src="./images/icon-arrow.svg" alt="arrow-icon"/>
       </div>
-      <div>
-         <picture>
-          <source srcset="./images/mobile-image-hero-3.jpg" media="(max-width: 510px)" />
-          <img src="./images/desktop-image-hero-3.jpg" alt="hero-image" />
-        </picture>
-        <h1>Manufactured with the best materials</h1>
-        <p>
-          Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
-          to ensure that every product is made as perfect and as consistent as possible. With three decades of
-          experience in this industry, we understand what customers want for their home and office.
-        </p>
+      <div class="hero__slider">
+        <button id="leftSlider" class="hero-slider__left-button">
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/>
+          </svg>
+        </button>
+        <button id="rightSlider" class="hero-slider__left-button">
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/>
+          </svg>
+        </button>
       </div>
-      <span>Shop now</span><img src="./images/icon-arrow.svg" alt="arrow-icon"/>
-      <div>
-        <img src="./images/icon-angle-left.svg" alt="left-angle-icon"/>
-        <img src="./images/icon-angle-right.svg" alt="right-angle-icon"/>
-      </div>
-      <img>
     </section>
-    <section>
-      <img src="./images/image-about-dark.jpg" alt="dark-about-image">
-      <div>
-        <h1>About our furniture</h1>
-        <p>
+    <section class="about">
+      <img class="about__dark-image" src="./images/image-about-dark.jpg" alt="dark-about-image">
+      <div class="about__info">
+        <h1 class="about-info__heading">About our furniture</h1>
+        <p class="about-info__text">
           Our multifunctional collection blends design and function to suit your individual taste.
           Make each room unique, or pick a cohesive theme that best express your interests and what
           inspires you. Find the furniture pieces you need, from traditional to contemporary styles
           or anything in between. Product specialists are available to help you create your dream space.
         </p>
       </div>
-      <img src="./images/image-about-light.jpg" alt="light-about-image">
+      <img class="about__light-image" src="./images/image-about-light.jpg" alt="light-about-image">
     </section>
-    <footer class="attribution">
-      <span>
+    <footer class="footer">
+      <span class="footer__frontend__attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
         target="_blank">Frontend Mentor</a>.
       </span>
-      <span>
+      <span class="footer__author__attribution">
         Coded by <a href="https://github.com/codinci" target="_blank">Codinci</a>.
       </span>
-      <div>
+      <div class="footer__copyright">
         <span id="copyrightYear"></span><i>&copy;Copyright Room. All rights reserved.</i>
       </div>
     </footer>
