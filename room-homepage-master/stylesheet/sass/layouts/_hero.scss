@@ -1,4 +1,7 @@
 $color-black:  hsl(0, 0%, 0%);
+$color-dark-gray: hsl(0, 0%, 63%);
+$color-very-dark-gray: hsl(0, 0%, 27%);
+
 
 .hero {
 	display: flex;
@@ -8,30 +11,91 @@ $color-black:  hsl(0, 0%, 0%);
 	&__slide {
 		display: flex;
 		flex-direction: column-reverse;
+		z-index: 2;
 	}
-
 }
 
-.hero-slide__buttons {
-	grid-column: 5;
-	width: fit-content;
-	margin-top: -5.1rem;
-	background-color: $color-black;
-	padding: 1rem;
-	margin-left: auto;
+
+.hero-slide {
+	&__content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		width: 320px;
+		margin: 4rem auto;
+	}
+	&__buttons {
+		grid-column: 5;
+		width: fit-content;
+		margin-top: -5.1rem;
+		margin-left: auto;
+		background-color: $color-black;
+	}
+}
+
+.hero-slide-content{
+	&__main {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	&__action {
+		display: inline-block;
+		margin-top: 2.5rem;
+		padding: 0 1rem;
+	}
+}
+
+.hero-slide-main {
+	&__header {
+		font-weight: 700;
+		font-size: 3rem;
+		padding: 1.5rem 1rem;
+	}
+	&__text {
+		font-weight: 500;
+		color: $color-dark-gray;
+		line-height: 1.5rem;
+		padding: 0 1rem;
+		width: 245px;
+	}
+}
+
+.hero-slide-action {
+	&__text {
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 1.2rem;
+		text-decoration: none;
+		color: $color-black;
+		&:hover {
+			cursor: pointer;
+			color: $color-dark-gray;
+		}
+	}
+	&__icon {
+		margin: 0 1.5rem;
+	}
 }
 
 .hero-slide-buttons {
 	&__left-button {
-		background-color: transparent;
+		background-color: $color-black;
+		padding: 1rem 2rem;
 		border: none;
-		margin: 0 2rem;
+		cursor: pointer;
+		&:hover {
+			background-color: $color-very-dark-gray;
+		}
 	}
 	&__right-button {
-		background-color: transparent;
+		background-color: $color-black;
+		padding: 1rem 2rem;
 		border: none;
-		margin: 0 2rem;
-
+		cursor: pointer;
+		&:hover {
+			background-color: $color-very-dark-gray;
+		}
 	}
 }
 
@@ -53,12 +117,20 @@ $color-black:  hsl(0, 0%, 0%);
 		&__content {
 			display: flex;
 			flex-direction: column;
-			align-items: flex-start; /* Center the content horizontally */
+			margin: 0 8rem;
+		}
+	}
+	.hero-slide-main {
+		&__text {
+			width: 320px;
 		}
 	}
 
+
+
 	.hero-slide__buttons {
 		margin-top: auto;
+		margin-bottom: .35rem;
 		margin-right: auto;
 		margin-left: 0;
 	}
