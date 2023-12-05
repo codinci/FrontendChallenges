@@ -8,8 +8,6 @@ export default class ToggleMenu {
 		this.hamburgerBtn = document.getElementById('hamburgerIcon')
 		this.closeBtn = document.getElementById('navCloseIcon')
 		this.navHeader = document.getElementById('navHeader')
-		this.navLinks = document.getElementById('navLinks')
-		this.logo = document.getElementById('headerLogo')
 		return true;
 	}
 
