@@ -132,14 +132,13 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 			width: 320px;
 		}
 	}
-
-
-
+	
 	.hero-slide__buttons {
 		margin-top: auto;
 		margin-bottom: .35rem;
 		margin-right: auto;
 		margin-left: 0;
+		padding: 0 .5rem;
 	}
 
 }
