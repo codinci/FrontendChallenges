@@ -46,11 +46,11 @@ $color-dark-gray: hsl(0, 0%, 63%);
 	}
 }
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width: 1280px) {
 	.about {
 		display:flex;
 		flex-direction: row;
-		margin-top: -.5rem;
+		margin-top: -1.7rem;
 		&__info {
 			margin-top: 5rem;
 		}
@@ -66,5 +66,28 @@ $color-dark-gray: hsl(0, 0%, 63%);
 		}
 	}
 
+}
 
+
+
+
+@media screen and (min-width:1420px) {
+	.about {
+		display:flex;
+		flex-direction: row;
+		margin-top: -.35rem;
+		&__info {
+			margin-top: 5rem;
+		}
+		&__light-image,
+		&__dark-image {
+			width: 800px;
+		}
+	}
+	.about-info{
+		&__header {
+			font-size: 1.5rem;
+			letter-spacing: .7rem;
+		}
+	}
 }
