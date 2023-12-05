@@ -1,10 +1,12 @@
 $color-white:  hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
 
 .header {
 	grid-column: 1/5;
 	grid-row: 1;
 	z-index: 1;
 	margin: 4rem 2rem;
+
 	&__mobile-hamburger {
 		background-color: transparent;
 		border: none;
@@ -12,9 +14,41 @@ $color-white:  hsl(0, 0%, 100%);
 	}
 	&__logo {
 		margin-left: 8rem;
+		display: inline-block;
 	}
-	&__navbar {
+	&__navbar--mobile {
 		display: none;
+		flex-direction: row;
+		margin: -6rem -4rem;
+		background-color: $color-white;
+	}
+	&__closeIcon--mobile {
+		background-color: transparent;
+		margin: 4rem 0 4rem 4rem;
+		border: none;
+		cursor: pointer;
+	}
+
+}
+.navbar-links {
+	list-style: none;
+	display: none;
+	margin: 4rem 2rem 4rem 3rem;
+	&__list-item--mobile {
+		display: inline-block;
+		color: $color-black;
+		font-weight: 600;
+		font-size: 1.5rem;
+		padding: .2rem 0;
+		margin: 0 2rem;
+		text-transform: lowercase;
+		cursor: pointer;
+		padding-bottom: .5rem;
+		position: relative;
+	}
+	&__link-item--mobile {
+		display: block;
+		text-decoration: none;
 	}
 }
 
@@ -30,16 +64,29 @@ $color-white:  hsl(0, 0%, 100%);
 		&__logo {
 			margin: 0 4rem;
 			height: 1.5rem;
+			display: inline-block;
+		}
+		&__navbar--mobile {
+			display: none;
+			background-color: inherit;
 		}
 		&__navbar {
 			display: block;
+		}
+		&__closeIcon--mobile {
+			display: none;
 		}
 	}
 	.navbar-links {
 		list-style: none;
 		display: flex;
-	}
-	.navbar-links{
+		margin: 0;
+		&__list-item--mobile {
+			display: none;
+		}
+		&__link-item--mobile {
+			display: none;
+		}
 		&__list-item {
 			display: inline-block;
 			color: $color-white;
@@ -60,7 +107,7 @@ $color-white:  hsl(0, 0%, 100%);
 					width: 50%;
 					height: .2rem;
 					background-color: $color-white;
-					transform: translateX(-50%); 
+					transform: translateX(-50%);
 				}
 			}
 		}
@@ -69,6 +116,5 @@ $color-white:  hsl(0, 0%, 100%);
 			text-decoration: none;
 		}
 	}
-
 
 }
