@@ -18,14 +18,12 @@ export default class ToggleMenu {
 		this.closeBtn.addEventListener('click', () => this.hide())
 	}
 
-	// show() {
-	// 	this.navHeader.style.display = 'flex'
-	// 	this.navLinks.style.display = 'flex'
-	// }
+	show() {
+		this.navHeader.classList.add('header__navbar--mobile')
+	}
 
-	// hide() {
-	// 	this.navHeader.style.display = 'none'
-	// 	this.navLinks.style.display = 'none'
-	// }
+	hide() {
+		this.navHeader.classList.remove('header__navbar--mobile')
+	}
 
 }
