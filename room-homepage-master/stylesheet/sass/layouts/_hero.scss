@@ -22,12 +22,12 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 		justify-content: center;
 		flex-direction: column;
 		width: 320px;
-		margin: 4rem auto;
+		margin: 5rem auto;
 	}
 	&__buttons {
 		grid-column: 5;
 		width: fit-content;
-		margin-top: -5.1rem;
+		margin-top: -6.1rem;
 		margin-left: auto;
 		background-color: $color-black;
 	}
@@ -58,15 +58,17 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 .hero-slide-main {
 	&__header {
 		font-weight: 700;
-		font-size: 3rem;
-		padding: 1.5rem 1rem;
+		font-size: 3.5rem;
+		line-height: 4rem;
+		padding: .8rem .6rem;
 	}
 	&__text {
 		font-weight: 500;
+		font-size: 1.5rem;
 		color: $color-dark-gray;
-		line-height: 1.5rem;
-		padding: 0 1rem;
-		width: 245px;
+		line-height: 2.1rem;
+		padding: .6rem .6rem;
+		width: 305px;
 	}
 }
 
@@ -74,21 +76,19 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
   &__text {
 	text-transform: uppercase;
 	font-weight: 600;
+	font-size: 1.5rem;
+	margin: 1.8rem 1.8rem 0 -.5rem;
 	letter-spacing: 1.2rem;
 	text-decoration: none;
 	color: $color-black;
   }
 
-  &__icon {
-    margin: 0 1.5rem;
-	padding: 6rem;
-  }
 }
 
 .hero-slide-buttons {
 	&__left-button {
 		background-color: $color-black;
-		padding: 1rem 2rem;
+		padding: 1.5rem 2rem;
 		border: none;
 		cursor: pointer;
 		&:hover {
@@ -97,7 +97,7 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 	}
 	&__right-button {
 		background-color: $color-black;
-		padding: 1rem 2rem;
+		padding: 1.5rem 2rem;
 		border: none;
 		cursor: pointer;
 		&:hover {
@@ -116,7 +116,7 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 		&__slide {
 			display: flex;
 			flex-direction: column;
-			margin-top: 12%;
+			margin-top: 7.8%;
 		}
 
 	}
@@ -124,12 +124,30 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 		&__content {
 			display: flex;
 			flex-direction: column;
-			margin: 0 8rem;
+			margin: 0 0 0 9.5rem;
 		}
 	}
 	.hero-slide-main {
+		&__header {
+			font-size: 4.25rem;
+			width: 450px;
+			line-height: 4.48rem;
+		}
 		&__text {
-			width: 320px;
+			width: 400px;
+			margin-top: .5rem;
+			font-size: 1.5rem;
+			line-height: 2.2rem;
+		}
+	}
+
+	.hero-slide-content__action {
+		margin-top: 1rem;
+	}
+
+	.hero-slide-action{
+		&__text {
+			font-size: 1.5rem;
 		}
 	}
 
@@ -138,7 +156,17 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 		margin-bottom: .35rem;
 		margin-right: auto;
 		margin-left: 0;
+		padding: 1.25rem 0 1.25rem 2rem;
 
+	}
+	.hero-slide-buttons {
+		&__left-button {
+			padding: 1.5rem 1rem;
+
+		}
+		&__right-button {
+			padding: 1.5rem 4.5rem;
+		}
 	}
 
 }
