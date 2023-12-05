@@ -1,7 +1,31 @@
+$color-very-dark-gray: hsl(0, 0%, 27%);
+$color-dark-gray: hsl(0, 0%, 63%);
+
 .footer {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
+	margin: 1.5rem auto;
 	grid-column: 1/5;
 	grid-row: 5;
+	&__attribution {
+		text-align: center;
+	}
+	&__copyright {
+		text-align: center;
+		padding-top: .5rem;
+	}
+}
+
+.footer-attribution {
+	&__link {
+		text-decoration: none;
+		color: $color-dark-gray;
+		font-weight: 600;
+		&:hover {
+			cursor: pointer;
+			color: $color-very-dark-gray;
+		}
+	}
+
 }
