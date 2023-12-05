@@ -122,7 +122,14 @@ body {
 .hero-slide-content__action {
   display: inline-block;
   margin-top: 2.5rem;
-  padding: 0 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.hero-slide-content__action:hover .hero-slide-action__text {
+  color: hsl(0, 0%, 63%);
+}
+.hero-slide-content__action:hover .hero-slide-action__icon {
+  fill: hsl(0, 0%, 63%);
 }
 
 .hero-slide-main__header {
@@ -145,12 +152,9 @@ body {
   text-decoration: none;
   color: hsl(0, 0%, 0%);
 }
-.hero-slide-action__text:hover {
-  cursor: pointer;
-  color: hsl(0, 0%, 63%);
-}
 .hero-slide-action__icon {
   margin: 0 1.5rem;
+  padding: 6rem;
 }
 
 .hero-slide-buttons__left-button {

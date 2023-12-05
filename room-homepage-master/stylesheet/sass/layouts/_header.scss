@@ -50,17 +50,17 @@ $color-white:  hsl(0, 0%, 100%);
 			text-transform: lowercase;
 			cursor: pointer;
 			padding-bottom: .5rem;
-			position: relative; // Ensure relative positioning for pseudo-element
+			position: relative;
 			&:hover {
 				&:before {
-					content: ""; // Create a pseudo-element for the border
+					content: "";
 					position: absolute;
 					bottom: 0;
-					left: 50%; // Adjust as needed to center the border
-					width: 50%; // Adjust the width to make it shorter (e.g., 50%)
-					height: .2rem; // Adjust the thickness of the border
+					left: 50%;
+					width: 50%;
+					height: .2rem;
 					background-color: $color-white;
-					transform: translateX(-50%); // Center the border horizontally
+					transform: translateX(-50%); 
 				}
 			}
 		}

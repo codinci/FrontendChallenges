@@ -42,7 +42,16 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 	&__action {
 		display: inline-block;
 		margin-top: 2.5rem;
-		padding: 0 1rem;
+		padding: 1rem;
+		cursor: pointer;
+		&:hover {
+			.hero-slide-action__text {
+				color: $color-dark-gray;
+			}
+			.hero-slide-action__icon {
+				fill: $color-dark-gray;
+			}
+		}
 	}
 }
 
@@ -62,20 +71,18 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 }
 
 .hero-slide-action {
-	&__text {
-		text-transform: uppercase;
-		font-weight: 600;
-		letter-spacing: 1.2rem;
-		text-decoration: none;
-		color: $color-black;
-		&:hover {
-			cursor: pointer;
-			color: $color-dark-gray;
-		}
-	}
-	&__icon {
-		margin: 0 1.5rem;
-	}
+  &__text {
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1.2rem;
+	text-decoration: none;
+	color: $color-black;
+  }
+
+  &__icon {
+    margin: 0 1.5rem;
+	padding: 6rem;
+  }
 }
 
 .hero-slide-buttons {
