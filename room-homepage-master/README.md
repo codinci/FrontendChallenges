@@ -38,8 +38,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/codinci/FrontendChallenges/tree/main/room-homepage-master)
+- Live Site URL: [Github Pages](https://codinci.github.io/FrontendChallenges/room-homepage-master/)
 
 ## My process
 
@@ -53,12 +53,40 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Learnt about scss
 
-To see how you can add code snippets, see below:
+```scss
+$color-very-dark-gray: hsl(0, 0%, 27%);
+$color-dark-gray: hsl(0, 0%, 63%);
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 1.5rem auto;
+	grid-column: 1/5;
+	grid-row: 5;
+	&__attribution {
+		text-align: center;
+	}
+	&__copyright {
+		text-align: center;
+		padding-top: .5rem;
+	}
+}
+
+.footer-attribution {
+	&__link {
+		text-decoration: none;
+		color: $color-dark-gray;
+		font-weight: 600;
+		&:hover {
+			cursor: pointer;
+			color: $color-very-dark-gray;
+		}
+	}
+
+}
 ```
 ```css
 .proud-of-this-css {
@@ -73,13 +101,11 @@ const proudOfThisFunc = () => {
 
 ### Continued development
 - Learn how to create animations and transitions to crete smoother animated effects.
-### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+### Useful resources
+- [Mozilla](https://developer.mozilla.org/en-US/docs) - This helped me understand different javascript functions and events
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [codinci](https://www.frontendmentor.io/profile/codinci)
+- Github - [codinci](https://github.com/codinci)
