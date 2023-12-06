@@ -3,16 +3,6 @@ export default class Slider {
 		if (!this.variables()) return false;
 		this.setupEvents()
 		this.keyBoardInput()
-
-		this.scriptElement = document.currentScript
-
-		// Get the script source URL
-		// this.scriptSrc = this.scriptElement.src;
-
-		// // Extract the directory path
-		// this.scriptPath = this.scriptSrc.substring(0, scriptSrc.lastIndexOf('/'));
-
-		// console.log('Script Path:', this.scriptPath);
 	}
 
 	variables() {
@@ -20,24 +10,20 @@ export default class Slider {
 			{
 				title: `Discover innovative ways to decorate`,
 				description: `We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.`,
-				srcset: `./../images/mobile-image-hero-1.jpg`,
-				src: `./../images/desktop-image-hero-1.jpg`
 			},
 			{
 				title: `We are available all across the globe`,
 				description: `With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.`,
-				srcset: `./../images/mobile-image-hero-2.jpg`,
-				src: `./../images/desktop-image-hero-2.jpg`
 			},
 			{
 				title: `Manufactured with the best materials`,
 				description: `Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.`,
-				srcset: `./../images/mobile-image-hero-3.jpg`,
-				src: `./../images/desktop-image-hero-3.jpg`
 			}
 		]
 
-		this.heroImage = document.getElementById('heroImage')
+		this.heroImage1 = document.getElementById('heroImage1')
+		this.heroImage2 = document.getElementById('heroImage2')
+		this.heroImage3 = document.getElementById('heroImage3')
 		this.slideText = document.getElementById('slideText')
 		this.slideHeader = document.getElementById('slideHeader')
 		this.slideBtns = document.getElementsByClassName('hero-slide-buttons')
@@ -105,9 +91,26 @@ export default class Slider {
 		setTimeout(() => {
 			this.slideHeader.textContent = this.slides[slideNumber].title
 			this.slideText.textContent = this.slides[slideNumber].description
-			this.heroImage.querySelector('source').srcset = this.slides[slideNumber].srcset
-			this.heroImage.querySelector('img').src = this.slides[slideNumber].src
-		}, 500)
+			switch (slideNumber) {
+				case 0:
+					this.heroImage1.style.display = 'block'
+					this.heroImage2.style.display = 'none'
+					this.heroImage3.style.display = 'none'
+					break
+				case 1:
+					this.heroImage1.style.display = 'none'
+					this.heroImage2.style.display = 'block'
+					this.heroImage3.style.display = 'none'
+					break
+				case 2:
+					this.heroImage1.style.display = 'none'
+					this.heroImage2.style.display = 'none'
+					this.heroImage3.style.display = 'block'
+					break
+				default:
+					break
+			}
+		}, 250)
 
 	}
 }

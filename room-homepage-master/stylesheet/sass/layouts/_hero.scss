@@ -14,6 +14,16 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 	}
 }
 
+.hero-image--slide1 {
+	display: block;
+}
+
+.hero-image--slide2 {
+	display: none;
+}
+.hero-image--slide3 {
+	display: none;
+}
 
 .hero-slide {
 	&__content {
@@ -26,7 +36,7 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 	&__buttons {
 		grid-column: 5;
 		width: fit-content;
-		margin-top: -6.1rem;
+		margin-top: -5.8rem;
 		margin-left: auto;
 		background-color: $color-black;
 	}
@@ -146,11 +156,10 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 
 	.hero-slide__buttons {
 		margin-top: auto;
-		margin-bottom: .35rem;
 		margin-right: auto;
 		margin-left: 0;
 	}
 	.hero-slide-buttons {
-		padding: 2.5rem 3.2rem;
+		padding: 2.5rem 3.25rem;
 	}
 }
