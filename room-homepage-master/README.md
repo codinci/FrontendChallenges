@@ -27,7 +27,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+- Desktop View
+![Desktop View](./images/screenshots/screen-shot-desktop.png)
+
+- Mobile View
+![Mobile View](./images/screenshots/screen-shot-mobile.png)
+
+- Mobile Navbar View
+![Mobile Navbar View](./images/screenshots/screen-shot-mobile-navbar.png)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
@@ -55,7 +62,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Learnt about scss
 
-```scss
+```_footer.scss
 $color-very-dark-gray: hsl(0, 0%, 27%);
 $color-dark-gray: hsl(0, 0%, 63%);
 
@@ -88,15 +95,37 @@ $color-dark-gray: hsl(0, 0%, 63%);
 
 }
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+
+- Learnt about CSS grid
+
+```_typography.scss
+body {
+	font-family: $font-family;
+	font-weight: 500;
+	max-height: 100dvh;
+	font-size: 1.2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows:repeat(4, 1fr) ;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+- Learnt on keyboard events
+
+```slider.js
+keyBoardInput() {
+		document.addEventListener('keydown', (event) => {
+				switch (event.key) {
+					case 'ArrowLeft':
+						this.slideSetup(null, 'prev')
+						break
+					case 'ArrowRight':
+						this.slideSetup(null, 'next')
+						break
+					default:
+						break
+				}
+		})
+	}
 ```
 
 ### Continued development

@@ -57,7 +57,6 @@ export default class Slider {
 					default:
 						break
 				}
-
 		})
 	}
 
