@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Room homepage</title>
-  <link rel="stylesheet" href="./stylesheet/css/main.css"/>
-  <script defer type="module" src="./js/app.js"></script>
+  <link rel="stylesheet" href="./stylesheet/css/main.css">
 </head>
 <body class="container">
   <!-- Navbar -->
@@ -16,7 +15,7 @@
         <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#FFF" fill-rule="evenodd"/>
       </svg>
     </button>
-    <img class="header__logo" src="./images/logo.svg" alt="logo-image"/>
+    <img class="header__logo" src="./images/logo.svg" alt="logo-image">
 
     <!-- Desktop navigation -->
     <nav id="navHeader" class="header__navbar">
@@ -54,8 +53,8 @@
     <!-- Hero slide section -->
     <section class="hero">
       <picture id="heroImage" class="hero__image">
-        <source width="100%" srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 415px)" />
-        <img src="./images/desktop-image-hero-1.jpg" alt="hero-image" />
+        <source srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 415px)">
+        <img class="hero-image" src="./images/desktop-image-hero-1.jpg" alt="hero-image">
       </picture>
       <div class="hero__slide">
 
@@ -85,12 +84,12 @@
         <div class="hero-slide__buttons">
           <button class="hero-slide-buttons" data-btn="prev">
             <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/>
+              <path d="M13 0L1 12l12 12" stroke="#FFF" stroke-width="1.5" fill="none" fill-rule="evenodd"/>
             </svg>
           </button>
           <button class="hero-slide-buttons" data-btn="next">
             <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 0l12 12L1 24" stroke="#FFF"stroke-width="1.2" fill="none" fill-rule="evenodd"/>
+              <path d="M1 0l12 12L1 24" stroke="#FFF" stroke-width="1.5" fill="none" fill-rule="evenodd"/>
             </svg>
           </button>
         </div>
@@ -141,5 +140,6 @@
         <span id="copyrightYear"></span><i>&copy;Copyright Room. All rights reserved.</i>
       </div>
     </footer>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>

@@ -94,6 +94,11 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 	}
 }
 
+@media screen and (max-width: 415px) {
+	.hero-image {
+		width: 100%;
+	}
+}
 
 @media screen and (min-width: 1280px) {
 	.hero {
