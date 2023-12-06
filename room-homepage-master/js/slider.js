@@ -2,6 +2,7 @@ export default class Slider {
 	constructor() {
 		if (!this.variables()) return false;
 		this.setupEvents()
+		this.keyBoardInput()
 	}
 
 	variables() {
@@ -33,18 +34,36 @@ export default class Slider {
 
 		this.index = 0
 
+
 		return true
 	}
 
 	setupEvents() {
 		Array.from(this.slideBtns).forEach(btn => {
-			btn.addEventListener('click', (e) => this.slideSetup(e))
+			btn.addEventListener('click', (e) => this.slideSetup(e, null))
 		})
 	}
 
-	slideSetup(event) {
+	//keyboard input
+	keyBoardInput() {
+		document.addEventListener('keydown', (event) => {
+				switch (event.key) {
+					case 'ArrowLeft':
+						this.slideSetup(null, 'prev')
+						break
+					case 'ArrowRight':
+						this.slideSetup(null, 'next')
+						break
+					default:
+						break
+				}
+
+		})
+	}
+
+	slideSetup(event, direction) {
 		// check data attribute of btn
-		if (event.target.dataset.btn === 'next') {
+		if ((direction || event.target.dataset.btn) === 'next') {
 			// check the value of index compared to the length of the slides
 			// if the value of the index is equal or longer index should be zero
 			// otherwise increase the value of the index
@@ -57,7 +76,7 @@ export default class Slider {
 		}
 
 		// the data attribute is of type prev
-		else {
+		else if((direction || event.target.dataset.btn) === 'prev') {
 			// check the value of the index if it is at zero
 			// the new index value will be equal to the length of slides minus one
 			// else reduce the index value by one
@@ -66,6 +85,8 @@ export default class Slider {
 			} else {
 				this.index = this.index - 1
 			}
+		} else {
+			return
 		}
 
 		// call function to display slides depending on the index value
@@ -73,9 +94,12 @@ export default class Slider {
 	}
 
 	showSlide(slideNumber) {
-		this.slideHeader.textContent = this.slides[slideNumber].title
-		this.slideText.textContent = this.slides[slideNumber].description
-		this.heroImage.querySelector('source').srcset = this.slides[slideNumber].srcset
-		this.heroImage.querySelector('img').src = this.slides[slideNumber].src
+		setTimeout(() => {
+			this.slideHeader.textContent = this.slides[slideNumber].title
+			this.slideText.textContent = this.slides[slideNumber].description
+			this.heroImage.querySelector('source').srcset = this.slides[slideNumber].srcset
+			this.heroImage.querySelector('img').src = this.slides[slideNumber].src
+		}, 500)
+
 	}
 }

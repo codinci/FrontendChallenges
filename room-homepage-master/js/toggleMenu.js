@@ -17,11 +17,15 @@ export default class ToggleMenu {
 	}
 
 	show() {
-		this.navHeader.classList.add('header__navbar--mobile')
+		setTimeout(() => {
+			this.navHeader.classList.add('header__navbar--mobile')
+		},500)
 	}
 
 	hide() {
-		this.navHeader.classList.remove('header__navbar--mobile')
+		setTimeout(() => {
+			this.navHeader.classList.remove('header__navbar--mobile')
+		},300)
 	}
 
 }
