@@ -29,13 +29,13 @@ $color-black: hsl(0 0% 0%);
 		top: 0;
 		left: 0;
 		flex-direction: row;
-		height: 8rem;
+		height: 11rem;
 		width: 100%;
 	}
 	&__closeIcon--mobile {
 		background-color: transparent;
 		border: none;
-		margin: 2rem;
+		margin: 4.3rem 2.52rem;
 		height: 1.5rem;
 		cursor: pointer;
 	}
@@ -44,7 +44,7 @@ $color-black: hsl(0 0% 0%);
 .navbar-links--mobile {
 	list-style: none;
 	display: flex;
-	margin: 2rem;
+	margin: 4.52rem 1.8rem;
 }
 
 .navbar-links{
@@ -80,7 +80,8 @@ $color-black: hsl(0 0% 0%);
 			height: 1.5rem;
 			position: inherit;
 			background-color: inherit;
-			margin-top: -2rem;
+			margin-top: -4.5rem;
+			margin-left: -1.8rem;
 			flex-direction: row;
 			height: 0;
 			width: 0;
