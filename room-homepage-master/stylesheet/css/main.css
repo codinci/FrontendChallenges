@@ -68,7 +68,6 @@ body {
 
 .navbar-links__list-item--mobile {
   display: inline-block;
-  color: hsl(0, 0%, 100%);
   font-weight: 600;
   font-size: 1.5rem;
   padding: 0 1.7rem;
@@ -206,22 +205,13 @@ body {
   color: hsl(0, 0%, 0%);
 }
 
-.hero-slide-buttons__left-button {
+.hero-slide-buttons {
   background-color: hsl(0, 0%, 0%);
   padding: 1.5rem 2rem;
   border: none;
   cursor: pointer;
 }
-.hero-slide-buttons__left-button:hover {
-  background-color: hsl(0, 0%, 27%);
-}
-.hero-slide-buttons__right-button {
-  background-color: hsl(0, 0%, 0%);
-  padding: 1.5rem 2rem;
-  border: none;
-  cursor: pointer;
-}
-.hero-slide-buttons__right-button:hover {
+.hero-slide-buttons:hover {
   background-color: hsl(0, 0%, 27%);
 }
 
@@ -265,10 +255,7 @@ body {
     margin-right: auto;
     margin-left: 0;
   }
-  .hero-slide-buttons__left-button {
-    padding: 2.5rem 3.2rem;
-  }
-  .hero-slide-buttons__right-button {
+  .hero-slide-buttons {
     padding: 2.5rem 3.2rem;
   }
 }

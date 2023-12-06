@@ -85,23 +85,12 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 }
 
 .hero-slide-buttons {
-	&__left-button {
-		background-color: $color-black;
-		padding: 1.5rem 2rem;
-		border: none;
-		cursor: pointer;
-		&:hover {
-			background-color: $color-very-dark-gray;
-		}
-	}
-	&__right-button {
-		background-color: $color-black;
-		padding: 1.5rem 2rem;
-		border: none;
-		cursor: pointer;
-		&:hover {
-			background-color: $color-very-dark-gray;
-		}
+	background-color: $color-black;
+	padding: 1.5rem 2rem;
+	border: none;
+	cursor: pointer;
+	&:hover {
+		background-color: $color-very-dark-gray;
 	}
 }
 
@@ -157,12 +146,6 @@ $color-very-dark-gray: hsl(0, 0%, 27%);
 		margin-left: 0;
 	}
 	.hero-slide-buttons {
-		&__left-button {
-			padding: 2.5rem 3.2rem;
-		}
-		&__right-button {
-			padding: 2.5rem 3.2rem;
-		}
+		padding: 2.5rem 3.2rem;
 	}
-
 }

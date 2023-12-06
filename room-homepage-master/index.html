@@ -53,7 +53,7 @@
 
     <!-- Hero slide section -->
     <section class="hero">
-      <picture class="hero__image">
+      <picture id="heroImage" class="hero__image">
         <source width="100%" srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 415px)" />
         <img src="./images/desktop-image-hero-1.jpg" alt="hero-image" />
       </picture>
@@ -64,8 +64,8 @@
 
           <!-- Slides -->
           <div class="hero-slide-content__main">
-            <h1 class="hero-slide-main__header">Discover innovative ways to decorate</h1>
-            <p class="hero-slide-main__text">
+            <h1 id="slideHeader" class="hero-slide-main__header">Discover innovative ways to decorate</h1>
+            <p id="slideText" class="hero-slide-main__text">
               We provide unmatched quality, comfort, and style for property owners across the country.
               Our experts combine form and function in bringing your vision to life. Create a room in your
               own style with our collection and make your property a reflection of you and what you love.
@@ -83,12 +83,12 @@
 
         <!-- Slider Buttons -->
         <div class="hero-slide__buttons">
-          <button id="leftSlider" class="hero-slide-buttons__left-button">
+          <button class="hero-slide-buttons" data-btn="prev">
             <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/>
             </svg>
           </button>
-          <button id="rightSlider" class="hero-slide-buttons__right-button">
+          <button class="hero-slide-buttons" data-btn="next">
             <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 0l12 12L1 24" stroke="#FFF"stroke-width="1.2" fill="none" fill-rule="evenodd"/>
             </svg>
