@@ -38,84 +38,94 @@
     </nav>
   </header>
   <!-- Main Page -->
-  <main>
-    <section>
+  <main class="body-main">
+    <section class="callAction">
       <picture>
         <source srcset="./assets/images/image-web-3-mobile.jpg" media="(max-width: 435px)">
-        <img src="./assets/images/image-web-3-desktop.jpg" alt="web-3">
+        <img class="callAction__image" src="./assets/images/image-web-3-desktop.jpg" alt="web-3">
       </picture>
-      <h1>The Bright Future of Web 3.0?</h1>
-      <div>
-        <p>
+      <h1 class="callAction__header">The Bright Future of Web 3.0?</h1>
+      <div class="callAction__sidebar">
+        <p class="callAction-sidebar__message">
           We dive into the next evolution of the web that claims to put the power
           of the platforms back into the hands of the people. But is it really fulfilling
           its promise?
         </p>
-        <button>Read more</button>
+        <button class="callAction-sidebar__button">Read more</button>
       </div>
     </section>
-    <aside>
-      <h2>New</h2>
-      <div>
-        <h3>Hydrogen VS Electric Cars</h3>
-        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+    <aside class="main-aside">
+      <h2 class="main-aside__header">New</h2>
+      <div class="main-aside__news-item">
+        <h3 class="news-item__header">Hydrogen VS Electric Cars</h3>
+        <p class="news-item__message">Will hydrogen-fueled cars ever catch up to EVs?</p>
       </div>
-      <div>
-        <h3>The Downsides of AI Artistry</h3>
-        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+      <hr class="main-aside__news-item-divider">
+      <div class="main-aside__news-item">
+        <h3 class="news-item__header">The Downsides of AI Artistry</h3>
+        <p class="news-item__message">What are the possible adverse effects of on-demand AI image generation?</p>
       </div>
-      <div>
-        <h3>Is VC Funding Drying Up?</h3>
-        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      <hr class="main-aside__news-item-divider">
+      <div class="main-aside__news-item">
+        <h3 class="news-item__header">Is VC Funding Drying Up?</h3>
+        <p class="news-item__message">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
       </div>
     </aside>
-    <section>
-      <div>
-        <img src="./assets/images/image-retro-pcs.jpg" alt="retro-pcs">
-        <h4>01</h4>
-        <h5>Reviving Retro PCs</h5>
-        <p>What happens when old PCs are given modern upgrades?</p>
+    <section class="main-footer">
+      <div class="main-footer__item">
+        <img class="item__image" src="./assets/images/image-retro-pcs.jpg" alt="retro-pcs">
+        <div class="item">
+          <h4 class="item__title">01</h4>
+          <h5 class="item__subtitle">Reviving Retro PCs</h5>
+          <p class="item__message">What happens when old PCs are given modern upgrades?</p>
+        </div>
       </div>
-      <div>
-        <img src="./assets/images/image-top-laptops.jpg" alt="top-laptops">
-        <h4>02</h4>
-        <h5>Top 10 Laptops of 2022</h5>
-        <p>Our best picks for various needs and budgets.</p>
+      <div class="main-footer__item">
+        <img class="item__image" src="./assets/images/image-top-laptops.jpg" alt="top-laptops">
+        <div class="item">
+          <h4 class="item__title">02</h4>
+          <h5 class="item__subtitle">Top 10 Laptops of 2022</h5>
+          <p class="item__message">Our best picks for various needs and budgets.</p>
+        </div>
       </div>
-      <div>
-        <img src="./assets/images/image-gaming-growth.jpg" alt="gaming">
-        <h4>03</h4>
-        <h5>The Growth of Gaming</h5>
-        <p>How the pandemic has sparked fresh opportunities.</p>
+      <div class="main-footer__item">
+        <img class="item__image" src="./assets/images/image-gaming-growth.jpg" alt="gaming">
+        <div class="item">
+          <h4 class="item__title">03</h4>
+          <h5 class="item__subtitle">The Growth of Gaming</h5>
+          <p class="item__message">How the pandemic has sparked fresh opportunities.</p>
+        </div>
       </div>
     </section>
   </main>
   <!-- Footer -->
-  <footer>
-    <div>
-      <span>
-        Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-        >
-          Frontend Mentor
-        </a>.
-      </span>
-      <span>
-        Coded by
-        <a
-          href="https://github.com/codinci"
-          target="_blank"
-        >
-          Codinci
-        </a>.
-      </span>
-    </div>
-    <div>
-      <span></span><i>&copy;Copyright Room. All rights reserved.</i>
-    </div>
-  </footer>
+  <footer class="footer">
+      <div class="footer__attribution">
+        <span class="footer-attribution__frontendmentor">
+          Challenge by
+          <a
+            class="footer-attribution__link"
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+          >
+            Frontend Mentor
+          </a>.
+        </span>
+        <span class="footer-attribution__author">
+          Coded by
+          <a
+            class="footer-attribution__link"
+            href="https://github.com/codinci"
+            target="_blank"
+          >
+            Codinci
+          </a>.
+        </span>
+      </div>
+      <div class="footer__copyright">
+        <span id="copyrightYear"></span><i>&copy;Copyright Room. All rights reserved.</i>
+      </div>
+    </footer>
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>

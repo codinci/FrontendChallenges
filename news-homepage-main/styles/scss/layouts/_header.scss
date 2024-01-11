@@ -18,6 +18,7 @@ $background-color: hsl(36, 100%, 99%);
     padding-right: 12rem;
     align-self: flex-end;
     margin-bottom: 2.5rem;
+    padding-bottom: 3rem;
   }
 
   &__overlay {
@@ -52,13 +53,51 @@ $background-color: hsl(36, 100%, 99%);
     display: flex;
     flex-direction: column;
   }
+}
 
-  .navbar-list__item {
-    padding-top: 2.5rem;
+ .navbar-list__item {
+  padding-bottom: 4rem;
+}
+
+.navbar-list__item-link {
+  text-decoration: none;
+  color: hsl(240, 100%, 5%);
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 810px) {
+  .header-navbar {
+    &__menu-icon {
+      display: none;
+    }
+
+    &__menu-close-icon {
+      display: none;
+    }
+
+    &__overlay {
+      position: relative;
+      opacity: 1;
+      background-color:transparent;
+      margin-right: 12rem;
+    }
+
+    &__list {
+      position: relative;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
-
+  .navbar-list__item {
+    padding-bottom: 0rem;
+  }
   .navbar-list__item-link {
     text-decoration: none;
-    color: black;
+    color: hsl(236, 13%, 42%);
+    font-size: 1.5rem;
   }
-}
+ }
