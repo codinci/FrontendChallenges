@@ -66,6 +66,9 @@ $background-color: hsl(36, 100%, 99%);
 }
 
 @media screen and (min-width: 810px) {
+  .body-header {
+    margin: 0 8rem;
+  }
   .header-navbar {
     &__menu-icon {
       display: none;
@@ -79,7 +82,7 @@ $background-color: hsl(36, 100%, 99%);
       position: relative;
       opacity: 1;
       background-color:transparent;
-      margin-right: 12rem;
+      margin-right: 24rem;
     }
 
     &__list {

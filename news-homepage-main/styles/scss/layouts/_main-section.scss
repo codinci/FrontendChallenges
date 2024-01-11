@@ -40,6 +40,7 @@
 		color: hsl(35, 77%, 62%);
 		font-weight: 700;
 		padding: 1rem;
+		margin-top: 3rem;
 	}
 	&__news-item {
 		color: hsl(36, 100%, 99%);
@@ -90,4 +91,48 @@
 	&__message {
 		color: hsl(236, 13%, 42%);
 	}
+}
+
+@media screen and (min-width: 810px) {
+	.body-main {
+		margin: 0 8rem;
+		grid-template-columns: 395px 395px 315px;
+	}
+	.callAction {
+		grid-column: 1 / span 2;
+		&__board {
+			display: flex;
+			gap: 1rem;
+			margin-top: 2.5rem;
+		}
+
+		&__header {
+			font-size: 4rem;
+			padding: 0;
+		}
+	}
+	.main-aside {
+		grid-column-start: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		&__news-item {
+			margin: 1.5rem 0;
+		}
+	}
+
+	.main-footer {
+		grid-column: 1 / span 3;
+		gap: 11rem;
+		margin-top: 4rem;
+		display: flex;
+	}
+
+	.item {
+		width: 205px;
+		&__image {
+			width: 85px;
+			padding-right: 1rem;
+		}
+	}
+
 }
