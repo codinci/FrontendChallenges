@@ -73,8 +73,12 @@ body {
 
 .navbar-list__item-link {
   text-decoration: none;
-  color: hsl(240, 100%, 5%);
+  color: hsl(240, 0%, 90%);
   font-size: 2rem;
+}
+.navbar-list__item-link:hover {
+  cursor: pointer;
+  color: hsl(5, 85%, 63%);
 }
 
 @media screen and (min-width: 810px) {
@@ -92,6 +96,7 @@ body {
     opacity: 1;
     background-color: transparent;
     margin-right: 24rem;
+    pointer-events: auto;
   }
   .header-navbar__list {
     position: relative;
@@ -109,6 +114,12 @@ body {
     text-decoration: none;
     color: hsl(236, 13%, 42%);
     font-size: 1.5rem;
+    padding: 1.3rem;
+  }
+}
+@media screen and (min-width: 1420px) {
+  .navbar-list__item-link {
+    padding: 0;
   }
 }
 .body-main {
@@ -117,22 +128,22 @@ body {
   margin: 0 1rem;
 }
 
-.callAction__image {
+.call-action__image {
   width: 100%;
 }
-.callAction__header {
+.call-action__header {
   color: hsl(240, 100%, 5%);
   font-size: 4.5rem;
   line-height: 1em;
   padding: 1rem 0;
 }
 
-.callAction-sidebar__message {
+.call-action-sidebar__message {
   color: hsl(236, 13%, 42%);
   line-height: 1.5em;
   padding-right: 1.5rem;
 }
-.callAction-sidebar__button {
+.call-action-sidebar__button {
   width: 50%;
   padding: 1rem;
   margin: 1.5rem 0;
@@ -141,6 +152,11 @@ body {
   border: 1px solid hsl(5, 85%, 63%);
   color: hsl(36, 100%, 99%);
   font-weight: 700;
+}
+.call-action-sidebar__button:hover {
+  cursor: pointer;
+  background-color: hsl(240, 100%, 5%);
+  border: 1px solid hsl(240, 100%, 5%);
 }
 
 .main-aside {
@@ -164,6 +180,10 @@ body {
 .news-item__header {
   padding: 0.5rem 0;
   font-weight: 700;
+}
+.news-item__header:hover {
+  cursor: pointer;
+  color: hsl(35, 77%, 62%);
 }
 
 .main-footer {
@@ -193,6 +213,10 @@ body {
   font-weight: 700;
   color: hsl(240, 100%, 5%);
 }
+.item__subtitle:hover {
+  cursor: pointer;
+  color: hsl(5, 85%, 63%);
+}
 .item__message {
   color: hsl(236, 13%, 42%);
 }
@@ -202,15 +226,15 @@ body {
     margin: 0 8rem;
     grid-template-columns: 395px 395px 315px;
   }
-  .callAction {
+  .call-action {
     grid-column: 1/span 2;
   }
-  .callAction__board {
+  .call-action__board {
     display: flex;
     gap: 1rem;
     margin-top: 2.5rem;
   }
-  .callAction__header {
+  .call-action__header {
     font-size: 4rem;
     padding: 0;
   }

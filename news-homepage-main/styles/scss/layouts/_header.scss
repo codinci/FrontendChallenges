@@ -61,8 +61,12 @@ $background-color: hsl(36, 100%, 99%);
 
 .navbar-list__item-link {
   text-decoration: none;
-  color: hsl(240, 100%, 5%);
+  color: hsl(240 0% 90%);
   font-size: 2rem;
+  &:hover {
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+  }
 }
 
 @media screen and (min-width: 810px) {
@@ -83,6 +87,7 @@ $background-color: hsl(36, 100%, 99%);
       opacity: 1;
       background-color:transparent;
       margin-right: 24rem;
+      pointer-events: auto;
     }
 
     &__list {
@@ -102,5 +107,12 @@ $background-color: hsl(36, 100%, 99%);
     text-decoration: none;
     color: hsl(236, 13%, 42%);
     font-size: 1.5rem;
+    padding: 1.3rem;
   }
  }
+
+ @media screen and (min-width:1420px) {
+  .navbar-list__item-link {
+    padding: 0;
+  }
+}

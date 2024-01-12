@@ -4,7 +4,7 @@
 	margin: 0 1rem;
 }
 
-.callAction {
+.call-action {
 	&__image {
 		width: 100%;
 	}
@@ -16,7 +16,7 @@
 	}
 }
 
-.callAction-sidebar{
+.call-action-sidebar{
 	&__message {
 		color: hsl(236, 13%, 42%);
 		line-height: 1.5em;
@@ -31,6 +31,11 @@
 		border: 1px solid hsl(5, 85%, 63%);
 		color: hsl(36, 100%, 99%);
 		font-weight: 700;
+		&:hover{
+			cursor: pointer;
+			background-color: hsl(240, 100%, 5%);
+			border: 1px solid hsl(240, 100%, 5%);
+		}
 	}
 }
 
@@ -56,6 +61,10 @@
 	&__header {
 		padding: .5rem 0;
 		font-weight: 700;
+		&:hover {
+			cursor: pointer;
+			color: hsl(35, 77%, 62%);
+		}
 	}
 }
 
@@ -86,6 +95,10 @@
 		font-size: 1.8rem;
 		font-weight: 700;
 		color: hsl(240, 100%, 5%);
+		&:hover {
+			cursor: pointer;
+			color: hsl(5, 85%, 63%);
+		}
 	}
 
 	&__message {
@@ -98,7 +111,7 @@
 		margin: 0 8rem;
 		grid-template-columns: 395px 395px 315px;
 	}
-	.callAction {
+	.call-action {
 		grid-column: 1 / span 2;
 		&__board {
 			display: flex;
