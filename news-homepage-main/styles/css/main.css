@@ -88,7 +88,15 @@ body {
 
 @media screen and (min-width: 810px) {
   .body-header {
-    margin: 0 8rem;
+    margin: 7.2rem 15.46rem;
+  }
+  .body-header__logo {
+    width: 60px;
+    height: 40px;
+  }
+  .header-navbar {
+    display: flex;
+    justify-content: space-between;
   }
   .header-navbar__menu-icon {
     display: none;
@@ -100,25 +108,26 @@ body {
     position: relative;
     opacity: 1;
     background-color: transparent;
-    margin-right: 24rem;
+    margin-right: 25rem;
     pointer-events: auto;
   }
   .header-navbar__list {
     position: relative;
     list-style: none;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   .navbar-list__item {
-    padding-bottom: 0rem;
+    padding-bottom: 0;
+    padding-right: 3.8rem;
   }
   .navbar-list__item-link {
     text-decoration: none;
     color: hsl(236, 13%, 42%);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding: 1.3rem;
   }
 }
