@@ -27,7 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
+### Mobile View
+
 ![Mobile View](./assets/images/screenshots/mobile-design.png)
+
+### Desktop View
+
 ![Desktop View](./assets/images/screenshots/desktop-design.png)
 
 
