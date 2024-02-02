@@ -19,7 +19,7 @@ body {
 }
 
 .body-header {
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 1.2rem;
   margin: 1rem 0.5rem;
@@ -88,11 +88,11 @@ body {
 
 @media screen and (min-width: 810px) {
   .body-header {
-    margin: 7.2rem 15.46rem;
+    margin: 3rem 4rem;
   }
   .body-header__logo {
-    width: 60px;
-    height: 40px;
+    width: 40px;
+    height: 25px;
   }
   .header-navbar {
     display: flex;
@@ -108,7 +108,7 @@ body {
     position: relative;
     opacity: 1;
     background-color: transparent;
-    margin-right: 25rem;
+    margin-right: 36rem;
     pointer-events: auto;
   }
   .header-navbar__list {
@@ -132,13 +132,55 @@ body {
     padding-bottom: 0;
   }
 }
+@media screen and (min-width: 960px) {
+  .body-header {
+    margin: 7.2rem 15.46rem;
+  }
+  .body-header__logo {
+    width: 60px;
+    height: 40px;
+  }
+  .header-navbar__overlay {
+    margin-right: 25rem;
+  }
+}
 @media screen and (min-width: 1420px) {
   .navbar-list__item-link {
     padding: 0;
   }
 }
+.loader {
+  margin: 15rem auto;
+  color: hsl(240, 100%, 5%);
+  width: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: loader 0.5s infinite alternate linear;
+  -webkit-box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  -webkit-transform: translateX(-38px);
+  -webkit-animation: loader 0.5s infinite alternate linear;
+}
+
+@keyframes loader {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+  }
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+  }
+}
+@-webkit-keyframes loader {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+  }
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+  }
+}
 .body-main {
-  display: grid;
+  display: none;
   gap: 1.5rem;
   margin: 1.65rem 1.5rem;
 }
@@ -252,33 +294,34 @@ body {
 
 @media screen and (min-width: 810px) {
   .body-main {
-    margin: 0 16.2rem;
-    margin-top: -4rem;
-    grid-template-columns: 355px 355px 352px;
-    gap: 2.5rem;
+    margin: 0 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
   .call-action {
     grid-column: 1/span 2;
   }
   .call-action__board {
     display: flex;
-    gap: 5rem;
+    flex-direction: column;
+    gap: 2.5rem;
     margin-top: 2rem;
     padding-right: 2rem;
   }
   .call-action__header {
-    font-size: 5.8rem;
+    font-size: 6rem;
     padding: 0;
   }
   .call-action__sidebar {
-    width: 115%;
+    width: 100%;
   }
   .call-action-sidebar__message {
     line-height: 1.6em;
     margin-bottom: 1.5rem;
+    font-size: 1.8rem;
   }
   .call-action-sidebar__button {
-    width: 56%;
+    width: 60%;
   }
   .main-aside {
     grid-column-start: 3;
@@ -296,9 +339,69 @@ body {
     margin-left: 1.2rem;
   }
   .main-aside__news-item-divider {
+    width: 90%;
+    margin: 0 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .news-item__message {
+    margin-bottom: -0.35rem;
+    line-height: 1.7em;
+  }
+  .main-footer {
+    grid-column: 1/span 3;
+    gap: 0.6rem;
+    margin: 0;
+    margin-top: 2.5rem;
+    display: flex;
+  }
+  .item {
+    width: 138px;
+    gap: 0.5rem;
+  }
+  .item__image {
+    padding-right: 1.5rem;
+    height: 135px;
+  }
+  .item__title {
+    font-size: 2.5rem;
+  }
+  .item__subtitle {
+    font-size: 1.6rem;
+  }
+  .item__message {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+  }
+}
+@media screen and (min-width: 960px) {
+  .body-main {
+    margin: 0 16.2rem;
+    margin-top: -4rem;
+    grid-template-columns: 355px 355px 352px;
+    gap: 2.5rem;
+  }
+  .call-action {
+    grid-column: 1/span 2;
+  }
+  .call-action__board {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .call-action__header {
+    font-size: 5.8rem;
+  }
+  .call-action__sidebar {
+    width: 115%;
+  }
+  .call-action-sidebar__message {
+    font-size: 1.5rem;
+  }
+  .call-action-sidebar__button {
+    width: 56%;
+  }
+  .main-aside__news-item-divider {
     width: 85%;
     margin: 0 2.8rem;
-    margin-bottom: 1rem;
   }
   .news-item__message {
     margin-bottom: -0.35rem;
@@ -316,13 +419,14 @@ body {
   }
   .item__image {
     padding-right: 3rem;
+    height: 125px;
   }
   .item__message {
     line-height: 1.75em;
   }
 }
 .footer {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   margin: 1.5rem;

@@ -1,5 +1,15 @@
+window.addEventListener('load', () => {
+	const loader = document.getElementById('loader')
+	const header = document.getElementById('header')
+	const main = document.getElementById('main')
+	const footer = document.getElementById('footer')
+	loader.style.display = 'none'
+	header.style.display = 'flex'
+	main.style.display = 'grid'
+	footer.style.display = 'flex'
+})
+
 document.addEventListener('DOMContentLoaded', () => {
-	console.log('Loaded page')
 	const menuBtn = document.getElementById('menuBtn')
 	const navList = document.getElementById('navList')
 	const closeBtn = document.getElementById('closeBtn')

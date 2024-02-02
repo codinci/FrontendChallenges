@@ -1,7 +1,7 @@
 $background-color: hsl(36, 100%, 99%);
 
 .body-header {
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 1.2rem;
   margin: 1rem .5rem;
@@ -77,10 +77,10 @@ $background-color: hsl(36, 100%, 99%);
 
 @media screen and (min-width: 810px) {
   .body-header {
-    margin: 7.2rem 15.46rem;
+    margin: 3rem 4rem;
     &__logo {
-      width: 60px;
-      height: 40px;
+      width: 40px;
+      height: 25px;
     }
   }
   .header-navbar {
@@ -98,7 +98,7 @@ $background-color: hsl(36, 100%, 99%);
       position: relative;
       opacity: 1;
       background-color:transparent;
-      margin-right: 25rem;
+      margin-right: 36rem;
       pointer-events: auto;
     }
 
@@ -124,6 +124,21 @@ $background-color: hsl(36, 100%, 99%);
     padding-bottom: 0;
   }
  }
+
+@media screen and (min-width: 960px) {
+  .body-header {
+    margin: 7.2rem 15.46rem;
+    &__logo {
+      width: 60px;
+      height: 40px;
+    }
+  }
+  .header-navbar {
+    &__overlay {
+      margin-right: 25rem;
+    }
+ }
+}
 
  @media screen and (min-width:1420px) {
   .navbar-list__item-link {
